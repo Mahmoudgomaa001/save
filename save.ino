@@ -1,6 +1,7 @@
 
 
 void setup() {
+  Serial.begin(9600);
   btnSetup();
   pinMode(12, OUTPUT);
 }

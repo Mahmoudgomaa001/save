@@ -10,11 +10,14 @@ void handler() {
 
   if (getBtn(emcbtn)) {
     // digitalWrite(relay, HIGH);
+    Serial.println(emcbtn);
     if (getBtn(forkbtn)) {
       timer = millis();
+      Serial.println(emcbtn);
     }
     if (timer &&  millis() < timer + timer_time_out) {
       if (getBtn(lockbtn)) {
+        Serial.println(lockbtn);
         digitalWrite(relay, HIGH);
       }
     }
